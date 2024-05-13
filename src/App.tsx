@@ -7,11 +7,13 @@ import { AboutPageLazy } from "./pages/AboutPage/AboutPage.lazy";
 
 import Counter from "./components/Counter";
 
-import "./index.scss";
+import "./styles/index.scss";
+import { useTheme } from "./theme/useTheme";
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
       <Link to="./">Go to Main</Link>
       <br />
       <Link to="./about">Go to About</Link>
@@ -23,7 +25,9 @@ const App = () => {
         </Routes>
       </Suspense>
 
+      <button onClick={toggleTheme}>Toggle</button>
       <p className="red">Red</p>
+
       <Counter />
     </div>
   );
