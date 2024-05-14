@@ -9,11 +9,12 @@ import Counter from "./components/Counter";
 
 import "./styles/index.scss";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames("app", {}, [theme])}>
       <Link to="./">Go to Main</Link>
       <br />
       <Link to="./about">Go to About</Link>
