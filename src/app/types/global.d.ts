@@ -5,3 +5,12 @@ declare module "*.scss" {
   const classNames: IClassNames;
   export = classNames;
 }
+
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.jpeg";
+
+declare module "*.svg" {
+  const svg: string;
+  export default svg;
+}
