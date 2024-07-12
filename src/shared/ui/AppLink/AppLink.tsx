@@ -1,5 +1,5 @@
-import { LinkProps } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { LinkProps, Link } from "react-router-dom";
+
 import { FC } from "react";
 
 import { classNames } from "shared/lib/classNames/classNames";
@@ -17,7 +17,9 @@ interface AppLinkProps extends LinkProps {
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
-  const { to, children, className, theme = AppLinkTheme.PRIMARY, ...otherProps } = props;
+  const {
+    to, children, className, theme = AppLinkTheme.PRIMARY, ...otherProps
+  } = props;
 
   return (
     <Link to={to} className={classNames(cls.AppLink, {}, [className, cls[theme]])} {...otherProps}>
