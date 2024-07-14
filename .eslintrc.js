@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ["plugin:react/recommended", "airbnb"],
+  extends: ["plugin:react/recommended", "airbnb", "plugin:i18next/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module"
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "i18next"],
 
   rules: {
     "comma-dangle": ["error", "never"],
@@ -33,7 +33,8 @@ module.exports = {
     "no-underscore-dangle": "off",
     "linebreak-style": 0,
     "react/no-unused-prop-types": 0,
-    "object-curly-newline": 0
+    "object-curly-newline": 0,
+    "i18next/no-literal-string": ["error", { markupOnly: true }]
   },
   globals: {
     __IS_DEV__: true
