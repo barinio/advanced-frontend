@@ -1,5 +1,8 @@
 {
   "language": "Українська",
   "main-page": "Це Головна Сторінка",
-  "toggle": "перемикач"
+  "toggle": "перемикач",
+  "notFoundText": "Cторінку не знайдено!",
+  "linkToMain": "Головна",
+  "linkToAbout": "Про сайт"
 }
