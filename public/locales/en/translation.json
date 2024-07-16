@@ -1,5 +1,8 @@
 {
   "language": "English",
   "main-page": "This is the Main Page",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "notFoundText": "Page not found!",
+  "linkToMain": "Go to Main",
+  "linkToAbout": "Go to About"
 }

@@ -23,7 +23,7 @@ module.exports = {
     "react/jsx-filename-extension": [2, { extensions: [".js", ".jsx", ".ts", ".tsx"] }],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "no-unused-vars": [("warn", { argsIgnorePattern: "^_" })],
+    "no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     "react/require-default-props": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "warn",
@@ -36,12 +36,9 @@ module.exports = {
     "react/no-unused-prop-types": 0,
     "object-curly-newline": 0,
     "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "max-len": [
-      "error",
-      {
-        ignoreComments: true
-      }
-    ]
+    "max-len": ["warn", { code: 100, ignoreComments: true }],
+    "arrow-body-style": "off",
+    "react/jsx-wrap-multilines": "off"
   },
   globals: {
     __IS_DEV__: true

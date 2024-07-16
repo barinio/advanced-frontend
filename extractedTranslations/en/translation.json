@@ -1,6 +1,10 @@
 {
+  "Go to Main": "Go to Main",
   "about-page": "about-page",
   "language": "language",
+  "linkToAbout": "linkToAbout",
+  "linkToMain": "linkToMain",
   "main-page": "main-page",
+  "notFoundText": "notFoundText",
   "toggle": "toggle"
 }
