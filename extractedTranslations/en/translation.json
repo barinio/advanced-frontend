@@ -1,10 +1,13 @@
 {
   "Go to Main": "Go to Main",
   "about-page": "about-page",
+  "errorText": "errorText",
   "language": "language",
   "linkToAbout": "linkToAbout",
   "linkToMain": "linkToMain",
   "main-page": "main-page",
   "notFoundText": "notFoundText",
+  "reloadPage": "reloadPage",
+  "throwError": "throwError",
   "toggle": "toggle"
 }
