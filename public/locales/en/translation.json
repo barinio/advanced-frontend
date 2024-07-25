@@ -4,5 +4,8 @@
   "toggle": "toggle",
   "notFoundText": "Page not found!",
   "linkToMain": "Go to Main",
-  "linkToAbout": "Go to About"
+  "linkToAbout": "Go to About",
+  "errorText": "Something went wrong.",
+  "reloadPage": "Reload page",
+  "throwError": "throw error"
 }

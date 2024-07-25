@@ -4,5 +4,8 @@
   "toggle": "перемикач",
   "notFoundText": "Cторінку не знайдено!",
   "linkToMain": "Головна",
-  "linkToAbout": "Про сайт"
+  "linkToAbout": "Про сайт",
+  "errorText": "Сталася неочікувана помилка.",
+  "reloadPage": "Перезавантажити",
+  "throwError": "викликати помилку"
 }
