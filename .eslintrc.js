@@ -35,12 +35,18 @@ module.exports = {
     "linebreak-style": 0,
     "react/no-unused-prop-types": 0,
     "object-curly-newline": 0,
-    "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "max-len": ["warn", { code: 100, ignoreComments: true }],
+    "i18next/no-literal-string": ["error", { markupOnly: true, ignoreAttribute: ["data-testid"] }],
+    "max-len": ["warn", { code: 120, ignoreComments: true }],
     "arrow-body-style": "off",
     "react/jsx-wrap-multilines": "off"
   },
   globals: {
     __IS_DEV__: true
-  }
+  },
+  overrides: [
+    {
+      files: ["**/src/**/*.test.{ts,tsx}"],
+      rules: { "i18next/no-literal-string": "off" }
+    }
+  ]
 };
