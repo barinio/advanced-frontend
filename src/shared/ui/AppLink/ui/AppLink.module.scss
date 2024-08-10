@@ -1,11 +1,15 @@
 .AppLink {
-	color: var(--prim-color);
+  color: var(--prim-color);
 }
 
 .primary {
-	color: var(--prim-color);
+  color: var(--prim-color);
+}
+
+.red {
+  color: red;
 }
 
 .inverted {
-	color: var(--inverted-prim-color);
+  color: var(--inverted-prim-color);
 }

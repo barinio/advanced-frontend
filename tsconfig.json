@@ -10,7 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "baseUrl": ".",
-    "paths": { "*": ["./src/*"] }
+    "paths": { "*": ["./src/*"] },
+    "skipLibCheck": true
   },
 
   "ts-node": {
@@ -19,5 +20,5 @@
     }
   },
 
-  "include": ["src/**/*", "config/**/*"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "config/**/*"]
 }
