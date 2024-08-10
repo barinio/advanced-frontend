@@ -16,7 +16,11 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.listLinks}>
-        <AppLink theme={AppLinkTheme.INVERTED} to={RoutePaths.main} className={cls.mainLink}>
+        <AppLink
+          theme={AppLinkTheme.INVERTED}
+          to={RoutePaths.main}
+          className={cls.mainLink}
+        >
           {t("linkToMain")}
         </AppLink>
         <AppLink theme={AppLinkTheme.INVERTED} to={RoutePaths.about}>
