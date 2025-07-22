@@ -2,3 +2,7 @@
 node_modules
 .idea
 *storybook.log
+build-storybook.log
+chromatic.log
+chromatic-build-*.xml
+chromatic-diagnostics.json
