@@ -1,38 +1,47 @@
-name: linting, testing, building
+name: Linting, Testing, Building, Chromatic
+
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 20.x ]
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Starting Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
-        run: npm install
-      - name: build production project
-        run: npm run build:prod
-      - name: linting typescript
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint TypeScript
         run: npm run lint:ts
-      - name: linting scss
+
+      - name: Lint SCSS
         run: npm run lint:scss
-      - name: unit testing
-        run: npm run test:unit
-      - name: build storybook
-        run: npm run storybook:build
-      - name: screenshot testing
-        run: npm run test:ui:ci
-      - name: Upload Loki difference images
-        uses: actions/upload-artifact@v4
+
+      - name: Run unit tests
+        run: npm run unit
+
+      - name: Build production project
+        run: npm run build:prod
+
+      - name: Build Storybook
+        run: npm run sb:build
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
         with:
-          name: loki-diffs
-          path: .loki/difference
-          if-no-files-found: warn
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: storybook-static
+          storybookConfigDir: config/storybook
